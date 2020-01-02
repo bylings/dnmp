@@ -286,14 +286,14 @@ services:
 
   gitlab:
     container_name: gitlab
-    image: gitlab/gitlab-ce:latest
+    image: gitlab/gitlab-ce:12.6.1-ce.0
     restart: always
     environment:
       GITLAB_OMNIBUS_CONFIG: |
-        external_url 'http://gitlab.76so.cn:8929'
+        external_url 'http://gitlab.76so.cn:10022'
         gitlab_rails['gitlab_shell_ssh_port'] = 2224
     ports:
-      - "8929:8929"
+      - "10022:10022"
       - "2224:22"
     volumes:
       - "/srv/gitlab/config:/etc/gitlab"
